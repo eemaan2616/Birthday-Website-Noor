@@ -8,13 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- 🎵 Background Music -->
+ <audio autoplay loop controls>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_20c90b932c.mp3?filename=happy-birthday-126566.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+  <!-- 💖 Falling Hearts (Visual) -->
   <div class="hearts"></div>
+
+  <!-- 🎂 Birthday Card -->
   <div class="card">
-    <h1>🎉 Happy Birthday Nooruuu! 🎂</h1>
-    <p>May your day be filled with sparkles, smiles, and sweet surprises! 💫</p>
+    <h1>🎉 Happy Birthday Nooruu! 🎂</h1>
+    <p class="typewriter">May your day be filled with sparkles, smiles, and sweet surprises! 💫</p>
     <p>You're one of a kind, and I'm so lucky to have a friend like you 💕</p>
     <p>Keep shining and chasing your dreams! ✨</p>
-    <p class="footer">— With love 💌</p>
+    <p class="footer">— With love Eemaan💌</p>
   </div>
+
+  <!-- 🎊 Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = () => {
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
 </body>
 </html>

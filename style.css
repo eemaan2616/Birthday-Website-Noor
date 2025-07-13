@@ -40,6 +40,7 @@ p {
   color: #a64dff;
 }
 
+/* 💕 Hearts Animation (background visual only) */
 .hearts::before,
 .hearts::after {
   content: '💜💖💗💞💓';
@@ -60,7 +61,31 @@ p {
   100% { transform: translateY(120vh); opacity: 0; }
 }
 
+/* 🎈 Floating Card */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
+}
+
+/* ⌨️ Typing Text Animation */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #d147a3;
+  white-space: nowrap;
+  margin: 20px auto;
+  letter-spacing: 0.1em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+  width: 0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #d147a3 }
 }
