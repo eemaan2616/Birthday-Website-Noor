@@ -1,35 +1,38 @@
+/* 🌸 Base Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(135deg, #ffe6f7, #e0ccff);
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   position: relative;
+  text-align: center;
 }
 
+/* 💌 Birthday Card */
 .card {
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 25px;
   box-shadow: 0 0 25px rgba(255, 182, 255, 0.5);
-  text-align: center;
   max-width: 600px;
+  width: 90%;
   animation: float 3s ease-in-out infinite;
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: #d147a3;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #4d004d;
   margin: 10px 0;
 }
@@ -40,7 +43,7 @@ p {
   color: #a64dff;
 }
 
-/* 💕 Hearts Animation (background visual only) */
+/* 💕 Hearts Animation */
 .hearts::before,
 .hearts::after {
   content: '💜💖💗💞💓';
@@ -61,13 +64,13 @@ p {
   100% { transform: translateY(120vh); opacity: 0; }
 }
 
-/* 🎈 Floating Card */
+/* ✨ Float Animation */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 }
 
-/* ⌨️ Typing Text Animation */
+/* ⌨️ Typing Animation */
 .typewriter {
   overflow: hidden;
   border-right: 0.15em solid #d147a3;
@@ -88,4 +91,23 @@ p {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #d147a3 }
+}
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .typewriter {
+    font-size: 1em;
+  }
 }
